@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kunlere Adetunji O. — Architecture Portfolio</title>
+<meta name="description" content="Selected architectural works by Kunlere Adetunji O., spanning residential, commercial and hospitality projects in Nigeria.">
+<meta name="theme-color" content="#f3f1eb">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Kunlere Adetunji O. — Architecture Portfolio">
+<meta property="og:description" content="Selected architectural works across residential, commercial and hospitality design.">
+<meta property="og:image" content="assets/page-4.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="site-header">
+  <a class="wordmark" href="#top">KA<span>.</span></a>
+  <nav aria-label="Main navigation">
+    <a href="#work">Work</a><a href="#motion">Motion</a><a href="#about">About</a><a href="#contact">Contact</a>
+  </nav>
+  <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Toggle colour mode">
+    <span class="theme-icon">◐</span><span class="theme-label">Dark</span>
+  </button>
+</header>
+
+<main id="top">
+<section class="hero">
+  <div class="hero-kicker">ARCHITECT / DESIGNER</div>
+  <h1>Spaces shaped by<br><em>place, climate &amp; experience.</em></h1>
+  <p class="hero-copy">Selected works 2019–2025 by Kunlere Adetunji O. A portfolio of residential, commercial, hospitality and civic architecture.</p>
+  <a class="scroll-cue" href="#work">Explore selected work <span>↓</span></a>
+</section>
+
+<section id="work" class="work-section section">
+  <div class="section-head"><span>01</span><h2>Selected Work</h2><p>Architecture, interiors and environments across Lagos and Nigeria.</p></div>
+  <div class="filter-bar" id="filter-bar">
+    <button class="filter active" data-filter="All">All</button>
+    <button class="filter" data-filter="Residential Development">Residential</button>
+    <button class="filter" data-filter="Commercial Development">Commercial</button>
+    <button class="filter" data-filter="Hospitality Architecture">Hospitality</button>
+    <button class="filter" data-filter="Place of Worship">Civic / Faith</button>
+    <button class="filter" data-filter="Academic">Academic</button>
+  </div>
+  <div id="project-grid" class="project-grid" aria-live="polite"></div>
+</section>
+
+<section id="motion" class="motion-section section">
+  <div class="section-head"><span>02</span><h2>Motion</h2><p>Architecture experienced through movement, sequence and atmosphere.</p></div>
+  <div class="motion-grid">
+    <article class="motion-card">
+      <div class="video-wrap"><iframe src="https://www.youtube.com/embed/u8mzCIqJYYQ" title="Twinmotion exterior animation" loading="lazy" allowfullscreen></iframe></div>
+      <div class="motion-meta"><span>TWINMOTION</span><h3>Exterior Animation 01</h3><a href="https://youtu.be/u8mzCIqJYYQ" target="_blank" rel="noreferrer">Open on YouTube ↗</a></div>
+    </article>
+    <article class="motion-card">
+      <div class="video-wrap"><iframe src="https://www.youtube.com/embed/CUVdI_p03Lk" title="Supermarkt Twinmotion animation" loading="lazy" allowfullscreen></iframe></div>
+      <div class="motion-meta"><span>TWINMOTION</span><h3>Animation 02 · Supermarkt</h3><a href="https://youtu.be/CUVdI_p03Lk" target="_blank" rel="noreferrer">Open on YouTube ↗</a></div>
+    </article>
+  </div>
+</section>
+
+<section id="about" class="about-section section">
+  <div class="section-head"><span>03</span><h2>About</h2><p>Architecture grounded in design, technology and environmental response.</p></div>
+  <div class="about-grid">
+    <div><p class="large">Kunlere Adetunji O. is an architect working across residential, commercial and hospitality design projects.</p><p>The portfolio brings together selected work from 2019–2025, spanning concept development, design detailing and completed projects.</p></div>
+    <div class="facts">
+      <a class="download-cv" href="assets/adetunji-portfolio-2025.pdf" target="_blank">View / download portfolio PDF ↗</a>
+      <div><b>Education</b><p>Masters of Environmental Design (in Architecture), University of Lagos, 2021–2024</p><p>BSc., Obafemi Awolowo University, 2015–2018</p></div>
+      <div><b>Affiliations</b><p>Associate Member, NIA<br>Member, Green Building Council of Nigeria<br>Project Management Professional (PMP)</p></div>
+      <div><b>Software</b><p>AutoCAD · Revit · 3ds Max · SketchUp · Photoshop · Filmora · Microsoft Tools · V-Ray</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact-section section">
+  <div class="section-head"><span>04</span><h2>Contact</h2></div>
+  <div class="contact-inner">
+    <p class="contact-title">Have a project, collaboration<br>or conversation in mind?</p>
+    <div class="contact-links">
+      <a href="mailto:adetunjikunlere01@gmail.com">adetunjikunlere01@gmail.com ↗</a>
+      <a href="tel:+2347061562448">+234 706 156 2448 ↗</a>
+      <a href="https://www.linkedin.com/in/adetunji-kunlere-6ba340182/" target="_blank" rel="noreferrer">LinkedIn ↗</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer><span>© Kunlere Adetunji O.</span><span>Architecture Portfolio · 2019–2025</span></footer>
+
+<div id="project-modal" class="modal" role="dialog" aria-modal="true" aria-label="Project details" aria-hidden="true">
+  <button class="modal-close" type="button" aria-label="Close project details">×</button>
+  <div class="modal-content"><div id="project-detail"></div></div>
+</div>
+<script>
+const projects = [
+  {
+    "id": "project-cc",
+    "title": "Project CC",
+    "type": "Residential Development",
+    "location": "Lekki, Lagos, Nigeria",
+    "status": "Construction",
+    "year": "2025",
+    "hero": "page-4.jpg",
+    "pages": [
+      "page-4.jpg",
+      "page-5.jpg",
+      "page-6.jpg"
+    ],
+    "intro": "An exploration of form through extrusion and subtraction, creating a rhythmic interplay of light, shadow, and depth.",
+    "body": "The architectural language is defined by clean linear expressions and subtle shifts in massing that carve out spaces of rest, privacy, and transition. Deep overhangs, perforated shading screens and planters temper the tropical climate while enriching the façade with texture and pattern. Transparent elements invite daylight deep into the interior, blurring the boundary between indoor and outdoor living."
+  },
+  {
+    "id": "ghurayb-hub",
+    "title": "Ghurayb Hub",
+    "type": "Commercial Development",
+    "location": "Lagos, Nigeria",
+    "status": "Design Detailing",
+    "year": "2025",
+    "hero": "page-7.jpg",
+    "pages": [
+      "page-7.jpg",
+      "page-8.jpg",
+      "page-9.jpg"
+    ],
+    "intro": "A multi-use commercial ecosystem merging craftsmanship, creativity and sustainability.",
+    "body": "The programme integrates a furniture showroom, workshop, office spaces, workstations and content studios. Conceived through modular container architecture, each volume defines a spatial hierarchy of display, production and collaboration. Adaptive reuse of shipping containers reduces embodied energy and construction waste, while phased development allows the hub to grow organically."
+  },
+  {
+    "id": "ikd-villa",
+    "title": "IKD Villa",
+    "type": "Residential Development",
+    "location": "Lagos, Nigeria",
+    "status": "Design Detailing",
+    "year": "2025",
+    "hero": "page-10.jpg",
+    "pages": [
+      "page-10.jpg",
+      "page-11.jpg",
+      "page-12.jpg"
+    ],
+    "intro": "A modernist residence shaped by simple architectural principles and biophilic thinking.",
+    "body": "Deep overhangs protect exposed east-facing walls while a courtyard supports cooling and connection to nature. Masses are extruded and voids subtracted to produce the desired visual effect while serving functional climatic purposes."
+  },
+  {
+    "id": "aa-condos",
+    "title": "AA Condos",
+    "type": "Residential Development",
+    "location": "Lagos, Nigeria",
+    "status": "In Progress",
+    "year": "2023–2024",
+    "hero": "page-16.jpg",
+    "pages": [
+      "page-16.jpg",
+      "page-17.jpg",
+      "page-18.jpg"
+    ],
+    "intro": "A residential complex combining Brutalist massing with minimalist contemporary interiors.",
+    "body": "Raw concrete, geometric forms, clean lines and open spaces are balanced with natural light, modern finishes and functional living environments. Sustainability is expressed through eco-friendly materials and energy-efficient systems."
+  },
+  {
+    "id": "delta-manor",
+    "title": "Delta Manor",
+    "type": "Residential Development",
+    "location": "Agbor, Delta, Nigeria",
+    "status": "Completed",
+    "year": "2023–2024",
+    "hero": "page-13.jpg",
+    "pages": [
+      "page-13.jpg",
+      "page-14.jpg",
+      "page-15.jpg"
+    ],
+    "intro": "A bespoke neo-classical residence designed around entertaining, comfort and the client's distinct taste.",
+    "body": "The design gives careful attention to bespoke spaces for entertaining and to elevating the lived experience of the home. A rooftop retreat provides both an escape from the city and a setting for gatherings. The exterior palette and detailing carry the stately, bespoke character through to the interiors."
+  },
+  {
+    "id": "d18-villa",
+    "title": "D18 Villa",
+    "type": "Residential Development",
+    "location": "Shoreline Estate, Lagos, Nigeria",
+    "status": "Completed",
+    "year": "2019–2020",
+    "hero": "page-19.jpg",
+    "pages": [
+      "page-19.jpg",
+      "page-20.jpg"
+    ],
+    "intro": "Contemporary waterfront living composed through dynamic volumes, open spaces and intimate connections with nature.",
+    "body": "The façade shifts with viewpoint through an interplay of solids and voids, framed terraces and deep overhangs. Open-plan interiors flow toward the water, while a disappearing-edge pool visually merges with the lagoon. Concrete, glass and natural tones allow texture, reflection and shadow to define the atmosphere."
+  },
+  {
+    "id": "vtt",
+    "title": "Villa Toni & Tomi",
+    "type": "Residential Development",
+    "location": "Shoreline Estate, Lagos, Nigeria",
+    "status": "Completed",
+    "year": "2019–2020",
+    "hero": "page-21.jpg",
+    "pages": [
+      "page-21.jpg"
+    ],
+    "intro": "A completed residential project located in Shoreline Estate, Lagos.",
+    "body": "Villa Toni & Tomi is presented in the portfolio as a residential project in Shoreline Estate, Lagos. The supplied project spread includes the site plan and exterior visualisations."
+  },
+  {
+    "id": "resort-hotel",
+    "title": "Resort Hotel",
+    "type": "Hospitality Architecture",
+    "location": "Academic Project",
+    "status": "Academic",
+    "year": "2021–2022",
+    "hero": "page-24.jpg",
+    "pages": [
+      "page-24.jpg",
+      "page-25.jpg",
+      "page-26.jpg"
+    ],
+    "intro": "A reinterpretation of hospitality through curves, layered screening and open-air gathering spaces.",
+    "body": "A sweeping multi-story ribbon wraps around the site, creating enclosure while maintaining visual porosity. Latticed timber screens filter sunlight, encourage natural ventilation and animate the façade with changing light and shadow. Natural timber and crisp white surfaces create a tactile, light-filled environment responsive to place, climate and culture."
+  },
+  {
+    "id": "religious-center",
+    "title": "Religious Center",
+    "type": "Place of Worship",
+    "location": "Academic Project",
+    "status": "Academic",
+    "year": "2021–2022",
+    "hero": "page-22.jpg",
+    "pages": [
+      "page-22.jpg",
+      "page-23.jpg"
+    ],
+    "intro": "A spiritual and communal space conceived around warmth, inclusion and reflection.",
+    "body": "Sweeping curves create an inward embrace, drawing people toward a shared center of faith and fellowship. Staggered seating supports visual connection and inclusivity, while courtyards and informal gathering zones encourage community interaction. Filtered light through curved surfaces and clerestories creates a calm, contemplative atmosphere."
+  }
+];
+const grid = document.querySelector('#project-grid');
+const modal = document.querySelector('#project-modal');
+const detail = document.querySelector('#project-detail');
+const filters = document.querySelectorAll('.filter');
+
+function escapeHTML(value){return String(value).replace(/[&<>\"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;',"'":'&#39;'}[c]));}
+function renderProjects(filter='All'){
+  const visible = filter === 'All' ? projects : projects.filter(p => p.type === filter || (filter === 'Academic' && p.status === 'Academic'));
+  grid.innerHTML = visible.map((p,i)=>`
+    <article class="project-card ${i===0 && filter==='All'?'featured':''}" data-id="${p.id}">
+      <button class="project-button">
+        <img src="assets/${p.hero}" alt="${escapeHTML(p.title)}" loading="lazy">
+        <div class="project-overlay"><span>${String(projects.indexOf(p)+1).padStart(2,'0')} · ${p.status==='Academic'?'Academic Project':p.type}</span><h3>${escapeHTML(p.title)}</h3><p>${escapeHTML(p.location)}</p></div>
+      </button>
+    </article>`).join('');
+}
+renderProjects();
+
+filters.forEach(btn => btn.addEventListener('click', () => {
+  filters.forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  renderProjects(btn.dataset.filter);
+}));
+
+function openProject(p, updateUrl=true){
+  detail.innerHTML = `
+    <div class="detail-intro">
+      <div><span class="eyebrow">${p.type} · ${p.year}</span><h2>${p.title}</h2><p>${p.location} · ${p.status}</p></div>
+      <div class="detail-text"><p class="lead">${p.intro}</p><p>${p.body}</p></div>
+    </div>
+    <div class="detail-gallery">${p.pages.map((img,i)=>`<img src="assets/${img}" alt="${p.title} — image ${i+1}" loading="${i?'lazy':'eager'}">`).join('')}</div>
+  `;
+  modal.classList.add('open'); modal.setAttribute('aria-hidden','false'); document.body.classList.add('locked');
+  if(updateUrl && location.hash !== `#work/${p.id}`) history.pushState({project:p.id},'',`#work/${p.id}`);
+}
+function closeProject(updateUrl=true){
+  modal.classList.remove('open'); modal.setAttribute('aria-hidden','true'); document.body.classList.remove('locked');
+  if(updateUrl && location.hash.startsWith('#work/')) history.pushState({},'', '#work');
+}
+grid.addEventListener('click',e=>{
+  const card=e.target.closest('.project-card');
+  if(card) openProject(projects.find(p=>p.id===card.dataset.id));
+});
+document.querySelector('.modal-close').onclick=closeProject;
+modal.addEventListener('click',e=>{if(e.target===modal)closeProject();});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeProject();});
+
+const themeToggle = document.querySelector('#theme-toggle');
+const savedTheme = localStorage.getItem('ka-theme');
+if(savedTheme === 'dark') document.documentElement.dataset.theme='dark';
+
+function updateThemeLabel(){
+  const dark = document.documentElement.dataset.theme === 'dark';
+  themeToggle.querySelector('.theme-label').textContent = dark ? 'Light' : 'Dark';
+  themeToggle.querySelector('.theme-icon').textContent = dark ? '☼' : '◐';
+}
+themeToggle.addEventListener('click',()=>{
+  const dark = document.documentElement.dataset.theme === 'dark';
+  document.documentElement.dataset.theme = dark ? 'light' : 'dark';
+  localStorage.setItem('ka-theme', dark ? 'light' : 'dark');
+  updateThemeLabel();
+});
+updateThemeLabel();
+
+function route(){
+  const id=location.hash.split('/')[1];
+  if(id){
+    const p=projects.find(x=>x.id===id);
+    if(p) openProject(p,false);
+    else closeProject(false);
+  } else if(modal.classList.contains('open')) {
+    closeProject(false);
+  }
+}
+window.addEventListener('hashchange',route);
+route();
+</script>
+</body>
+</html>

@@ -79,6 +79,5 @@ html:not([data-theme="dark"]) .hero-visual-shade{background-color:rgba(243,241,2
 @media(max-width:800px){.hero-visual{inset:12% 0 14% 0;width:100%;height:74%;object-position:center}.hero-visual-shade{background:linear-gradient(90deg,rgba(21,21,20,.78),rgba(21,21,20,.48)),linear-gradient(0deg,rgba(21,21,20,.72),transparent 55%)}html:not([data-theme="dark"]) .hero-visual-shade{background:linear-gradient(90deg,rgba(243,241,235,.82),rgba(243,241,235,.52)),linear-gradient(0deg,rgba(243,241,235,.68),transparent 55%)}}
 
 /* Performance refinements: defer offscreen rendering and avoid expensive hover filters */
-.project-card img{height:auto;decoding:async}
 @media(hover:hover){.project-card img{transition:transform .45s ease,filter .45s ease}}
 @media(prefers-reduced-motion:reduce){.project-card img{transition:none}.project-card:hover img{transform:none}}

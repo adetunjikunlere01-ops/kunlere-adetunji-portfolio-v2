@@ -81,3 +81,8 @@ html:not([data-theme="dark"]) .hero-visual-shade{background-color:rgba(243,241,2
 /* Performance refinements: defer offscreen rendering and avoid expensive hover filters */
 @media(hover:hover){.project-card img{transition:transform .45s ease,filter .45s ease}}
 @media(prefers-reduced-motion:reduce){.project-card img{transition:none}.project-card:hover img{transform:none}}
+
+/* Project SEO page links */
+.project-page-link{display:inline-block;margin-top:12px;padding-bottom:5px;border-bottom:1px solid var(--line);font:10px "DM Mono",monospace;text-transform:uppercase;letter-spacing:.04em;color:var(--muted)}
+.project-page-link:hover{color:var(--ink);border-color:var(--ink)}
+.modal-project-link{margin-top:18px;color:#ddd;border-color:#666}

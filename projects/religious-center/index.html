@@ -8,6 +8,7 @@
 <meta name="robots" content="index,follow,max-image-preview:large">
 <link rel="canonical" href="https://kunlere-portfolio.vercel.app/projects/religious-center/">
 <meta name="theme-color" content="#f3f1eb">
+<script>try{if(localStorage.getItem('ka-theme')==='dark')document.documentElement.dataset.theme='dark';}catch(e){}</script>
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="Kunlere Adetunji — Architecture Portfolio">
 <meta property="og:title" content="Religious Center | Kunlere Adetunji">
@@ -73,7 +74,7 @@
 <header class="site-header">
 <a class="wordmark" href="/#top">KA<span>.</span></a>
 <nav aria-label="Main navigation"><a href="/#work">Work</a><a href="/#expertise">Expertise</a><a href="/#about">About</a><a href="/#contact">Contact</a></nav>
-<a class="theme-toggle" href="/#work">Back to work ↗</a>
+<button class="theme-toggle" id="theme-toggle" type="button" aria-label="Toggle colour mode"><span class="theme-icon">◐</span><span class="theme-label">Dark</span></button>
 </header>
 <main class="project-page">
 <a class="project-page-back" href="/#work">← All projects</a>
@@ -86,5 +87,6 @@
 <figure><img src="../../assets/page-23.jpg" alt="Religious Center — architectural project view 2" loading="lazy" decoding="async"></figure></div>
 </main>
 <footer><span>© Kunlere Adetunji O.</span><span>Architecture Portfolio · <a href="/#about">About</a> · <a href="/#contact">Contact</a></span></footer>
+<script>(function(){const t=document.getElementById('theme-toggle');if(!t)return;function u(){const d=document.documentElement.dataset.theme==='dark';t.querySelector('.theme-label').textContent=d?'Light':'Dark';t.querySelector('.theme-icon').textContent=d?'☼':'◐';t.setAttribute('aria-label',d?'Switch to light mode':'Switch to dark mode');}t.addEventListener('click',function(){const d=document.documentElement.dataset.theme==='dark';document.documentElement.dataset.theme=d?'light':'dark';try{localStorage.setItem('ka-theme',d?'light':'dark');}catch(e){}u();});window.addEventListener('storage',function(e){if(e.key==='ka-theme'){document.documentElement.dataset.theme=e.newValue==='dark'?'dark':'light';u();}});u();})();</script>
 </body>
 </html>

@@ -3,19 +3,68 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Kunlere Adetunji O. — Architecture Portfolio</title>
-<meta name="description" content="Selected architectural works by Kunlere Adetunji O., spanning residential, commercial and hospitality projects in Nigeria.">
+<title>Kunlere Adetunji | Associate Architect in Lagos, Nigeria</title>
+<meta name="description" content="Kunlere Adetunji is an Associate Architect based in Lagos, Nigeria, working across residential, commercial and hospitality architecture, design consultancy, project management and architectural visualisation.">
 <meta name="theme-color" content="#f3f1eb">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<link rel="canonical" href="https://kunlere-portfolio.vercel.app/">
+<meta property="og:site_name" content="Kunlere Adetunji — Architecture Portfolio">
+<meta property="og:url" content="https://kunlere-portfolio.vercel.app/">
+<meta property="og:locale" content="en_NG">
+<meta name="twitter:title" content="Kunlere Adetunji | Associate Architect in Lagos, Nigeria">
+<meta name="twitter:description" content="Architecture, design consultancy, project management and architectural visualisation in Lagos, Nigeria.">
+<meta name="twitter:image" content="https://kunlere-portfolio.vercel.app/assets/page-4.jpg">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Kunlere Adetunji O. — Architecture Portfolio">
 <meta property="og:description" content="Selected architectural works across residential, commercial and hospitality design.">
-<meta property="og:image" content="assets/page-4.jpg">
+<meta property="og:image" content="https://kunlere-portfolio.vercel.app/assets/page-4.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;1,500&display=swap">
 <link rel="stylesheet" href="styles.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://kunlere-portfolio.vercel.app/#person",
+      "name": "Kunlere Adetunji O.",
+      "alternateName": "Kunlere Adetunji",
+      "jobTitle": "Associate Architect",
+      "url": "https://kunlere-portfolio.vercel.app/",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Lagos",
+        "addressCountry": "NG"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/in/adetunji-kunlere-6ba340182/"
+      ],
+      "knowsAbout": [
+        "Architectural design",
+        "Architectural consultancy",
+        "Residential architecture",
+        "Commercial architecture",
+        "Hospitality architecture",
+        "Project management",
+        "Architectural visualisation",
+        "Climate-responsive design"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://kunlere-portfolio.vercel.app/#website",
+      "url": "https://kunlere-portfolio.vercel.app/",
+      "name": "Kunlere Adetunji — Architecture Portfolio",
+      "inLanguage": "en",
+      "publisher": { "@id": "https://kunlere-portfolio.vercel.app/#person" }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 <header class="site-header">
@@ -316,6 +365,7 @@ function renderProjects(filter='All'){
         <img src="assets/${p.hero}" alt="${escapeHTML(p.title)}" loading="lazy" decoding="async">
         <div class="project-overlay"><span>${String(projects.indexOf(p)+1).padStart(2,'0')} · ${p.status==='Academic'?'Academic Project':p.type}</span><h3>${escapeHTML(p.title)}</h3><p>${escapeHTML(p.location)}</p></div>
       </button>
+      <a class="project-page-link" href="/projects/${p.id}/">Project information ↗</a>
     </article>`).join('');
 }
 renderProjects();
@@ -330,7 +380,7 @@ function openProject(p, updateUrl=true){
   detail.innerHTML = `
     <div class="detail-intro">
       <div><span class="eyebrow">${p.type} · ${p.year}</span><h2>${p.title}</h2><p>${p.location} · ${p.status}</p></div>
-      <div class="detail-text"><p class="lead">${p.intro}</p><p>${p.body}</p></div>
+      <div class="detail-text"><p class="lead">${p.intro}</p><p>${p.body}</p><a class="project-page-link modal-project-link" href="/projects/${p.id}/">Open project page ↗</a></div>
     </div>
     <div class="detail-gallery">${p.pages.map((img,i)=>`<img src="assets/${img}" alt="${p.title} — image ${i+1}" loading="${i?'lazy':'eager'}" decoding="async">`).join('')}</div>
   `;

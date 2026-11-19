@@ -8,6 +8,7 @@
 <meta name="robots" content="index,follow,max-image-preview:large">
 <link rel="canonical" href="https://kunlere-portfolio.vercel.app/projects/delta-manor/">
 <meta name="theme-color" content="#f3f1eb">
+<script>try{if(localStorage.getItem('ka-theme')==='dark')document.documentElement.dataset.theme='dark';}catch(e){}</script>
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="Kunlere Adetunji — Architecture Portfolio">
 <meta property="og:title" content="Delta Manor | Kunlere Adetunji">
@@ -74,7 +75,7 @@
 <header class="site-header">
 <a class="wordmark" href="/#top">KA<span>.</span></a>
 <nav aria-label="Main navigation"><a href="/#work">Work</a><a href="/#expertise">Expertise</a><a href="/#about">About</a><a href="/#contact">Contact</a></nav>
-<a class="theme-toggle" href="/#work">Back to work ↗</a>
+<button class="theme-toggle" id="theme-toggle" type="button" aria-label="Toggle colour mode"><span class="theme-icon">◐</span><span class="theme-label">Dark</span></button>
 </header>
 <main class="project-page">
 <a class="project-page-back" href="/#work">← All projects</a>
@@ -88,5 +89,30 @@
 <figure><img src="../../assets/page-15.jpg" alt="Delta Manor — architectural project view 3" loading="lazy" decoding="async"></figure></div>
 </main>
 <footer><span>© Kunlere Adetunji O.</span><span>Architecture Portfolio · <a href="/#about">About</a> · <a href="/#contact">Contact</a></span></footer>
+<script>
+(function(){
+  const toggle=document.getElementById('theme-toggle');
+  if(!toggle)return;
+  function updateThemeLabel(){
+    const dark=document.documentElement.dataset.theme==='dark';
+    toggle.querySelector('.theme-label').textContent=dark?'Light':'Dark';
+    toggle.querySelector('.theme-icon').textContent=dark?'☼':'◐';
+    toggle.setAttribute('aria-label',dark?'Switch to light mode':'Switch to dark mode');
+  }
+  toggle.addEventListener('click',function(){
+    const dark=document.documentElement.dataset.theme==='dark';
+    document.documentElement.dataset.theme=dark?'light':'dark';
+    try{localStorage.setItem('ka-theme',dark?'light':'dark');}catch(e){}
+    updateThemeLabel();
+  });
+  window.addEventListener('storage',function(event){
+    if(event.key==='ka-theme'){
+      document.documentElement.dataset.theme=event.newValue==='dark'?'dark':'light';
+      updateThemeLabel();
+    }
+  });
+  updateThemeLabel();
+})();
+</script>
 </body>
 </html>
